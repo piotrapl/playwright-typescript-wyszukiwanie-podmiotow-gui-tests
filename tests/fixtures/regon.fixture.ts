@@ -1,6 +1,4 @@
 // definujemy alias dla test (base) bo później rozszerzamy go o nasze fikstury 
-import { test as base, expect, Page } from '@playwright/test';
-
 // definiujemy typy dla naszych fikstur
 // w tym przypadku fikstura regonPage zawiera metody do interakcji ze stroną
 // (to customowe akcje, tzw. custom actions albo custom helpers)
@@ -11,14 +9,6 @@ import { test as base, expect, Page } from '@playwright/test';
 // dzięki temu możemy korzystać z tych metod w naszych testach w sposób asynchroniczny
 // (typowe w testach end-to-end z Playwright)
 
-type RegonFixtures = {
-  regonPage: {
-    open: () => Promise<void>;
-    searchByRegon: (value: string) => Promise<void>;
-    getErrorMessage: () => Promise<string>;
-    getCompanyName: () => Promise<string>;
-  };
-};
 // regonPage to jest Page Object dla strony wyszukiwarki
 // To jest podobne do Page Object Model (POM) ale implementowane jako fixture w Playwright
 // dzięki temu możemy łatwo zarządzać interakcjami ze stroną w naszych testach
@@ -33,6 +23,17 @@ type RegonFixtures = {
 // używamy await przy operacjach na stronie, bo są asynchroniczne
 //   zapewnia to, że operacje zakończą się zanim przejdziemy dalej w kodzie testu
 //   to jest kluczowe dla stabilności testów end-to-end
+
+import { test as base, expect, Page } from '@playwright/test';
+
+type RegonFixtures = {
+  regonPage: {
+    open: () => Promise<void>;
+    searchByRegon: (value: string) => Promise<void>;
+    getErrorMessage: () => Promise<string>;
+    getCompanyName: () => Promise<string>;
+  };
+};
 
 export const test = base.extend<RegonFixtures>({
   regonPage: async ({ page }, use) => {
