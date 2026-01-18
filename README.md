@@ -52,3 +52,25 @@ https://wyszukiwarkaregon.stat.gov.pl
 npm install
 npx playwright test
 npx playwright show-report
+
+## Możliwe usprawnienia, optymalizacje:
+
+- 🔹 Dodanie **testów API**, niezależnych od warstwy UI
+- 🔹 Przyspieszenie testów poprzez **mockowanie odpowiedzi sieciowych**
+- 🔹 Wprowadzenie **testów regresji wizualnej**
+- 🔹 Udoskonalenie selektorów przy użyciu **test ID** (jeśli dostępne)
+- 🔹 Oznaczanie lub izolacja **niestabilnych testów**
+- 🔹 Lepsze logowanie i obsługa błędów testowych
+- 🔹 Kategoryzacja testów przy użyciu **tagów Playwright**
+
+## Co można dodać do tego projektu, w jaki sposób go rozszerzyć ?
+
+- **Pipeline CI/CD** z GitHub Actions (równoległe uruchamianie testów, artefakty)
+- **Analizę wyników testów** i dashboardy
+- **Testy wieloprzeglądarkowe** (Chromium, Firefox, WebKit)
+- **Testy w widokach mobilnych**
+- Testy **wielojęzyczności (i18n)**
+- Zewnętrzne źródła danych testowych (JSON / CSV)
+- Testy bezpieczeństwa i dostępności (podstawowa walidacja a11y)
+- Podejście hybrydowe: testy UI + API + komponentowe
+- Rozszerzone raportowanie (metadane, środowisko, konfiguracja)
