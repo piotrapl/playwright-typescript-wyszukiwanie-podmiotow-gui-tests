@@ -67,8 +67,6 @@ npx playwright show-report
 - **Analizę wyników testów** i dashboardy
 - **Testy wieloprzeglądarkowe** (Chromium, Firefox, WebKit)
 - **Testy w widokach mobilnych**
-- Testy **wielojęzyczności (i18n)**
 - Zewnętrzne źródła danych testowych (JSON / CSV)
-- Testy bezpieczeństwa i dostępności (podstawowa walidacja a11y)
 - Podejście hybrydowe: testy UI + API
 - Rozszerzone raportowanie (metadane, środowisko, konfiguracja)
