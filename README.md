@@ -1,5 +1,7 @@
 # Testy automatyczne REGON – Playwright (TypeScript)
 
+[![CI](https://github.com/piotrapl/playwright-typescript-wyszukiwanie-podmiotow-gui-tests/actions/workflows/playwright.yml/badge.svg?branch=main)](https://github.com/piotrapl/playwright-typescript-wyszukiwanie-podmiotow-gui-tests/actions/workflows/playwright.yml)
+
 ## Opis projektu
 Projekt to zestaw **testów automatycznych UI** napisanych w **Playwright + TypeScript**
 
