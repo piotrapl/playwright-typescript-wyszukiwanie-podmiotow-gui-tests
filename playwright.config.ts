@@ -22,7 +22,14 @@ export default defineConfig({
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: [['html', { outputFolder: 'playwright-report', open: 'always' }]],
+  //reporter: [['html', { outputFolder: 'playwright-report', open: 'always' }]],
+  reporter: [
+  ['line'],
+  ['html', {
+    outputFolder: 'playwright-report',
+    open: process.env.CI ? 'never' : 'always'
+  }]
+],
   /* Ustawienia współdzielone między wszystkimi projektami. 
      Zobacz: https://playwright.dev/docs/api/class-testoptions. */
   use: {
