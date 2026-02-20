@@ -1,4 +1,4 @@
-name: CI - Playwright GUI Tests
+name: CI - Playwright UI Tests
 
 on:
   push:
